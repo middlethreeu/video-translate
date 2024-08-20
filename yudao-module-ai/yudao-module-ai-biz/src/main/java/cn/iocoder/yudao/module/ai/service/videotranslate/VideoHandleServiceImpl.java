@@ -364,8 +364,8 @@ public class VideoHandleServiceImpl implements VideoHandleService {
         cmdLine.addArgument("error");
         cmdLine.addArgument("-i");
         cmdLine.addArgument(videoFile);
-        cmdLine.addArgument("-vf");
-        String subtitles = "subtitles="+srtFile.replace(localBasePath,"")+":force_style='FontName=Ubuntu,FontSize=22"+(srtFile2.isEmpty()?"":",MarginV=30")+",PrimaryColour=&HFFFFFF&,Outline=1,Shadow=0,BackColour=&H9C9C9C&,Bold=-1,Alignment=2'";
+        cmdLine.addArgument("-lavfi");
+        String subtitles = "subtitles="+srtFile.replace(localBasePath,"")+":force_style='FontSize=22"+(srtFile2.isEmpty()?"":",MarginV=30")+",PrimaryColour=&HFFFFFF&,Outline=1,Shadow=0,BackColour=&H9C9C9C&,Bold=-1,Alignment=2'";
         if (!srtFile2.isEmpty()) {
             subtitles = subtitles + ",subtitles="+srtFile2.replace(localBasePath,"")+":force_style='FontName=Ubuntu,FontSize=16,PrimaryColour=&HFFFFFF&,Outline=1,Shadow=0,BackColour=&H9C9C9C&,Bold=-1,Alignment=2'";
         }
