@@ -388,7 +388,7 @@ public class VideoHandleServiceImpl implements VideoHandleService {
         ExecuteWatchdog watchdog = new ExecuteWatchdog(3600000); // 1小时超时
         executor.setWatchdog(watchdog);
         executor.setExitValue(0);
-
+        System.out.println(cmdLine.toString());
         try {
             executor.execute(cmdLine);
         } catch (ExecuteException e) {
